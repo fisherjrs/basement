@@ -22,15 +22,15 @@ public class Red {
 		double earthWeight = Double.parseDouble((args.length == 0) ? "67" : args[0]);
 		double mass = earthWeight / Planet.Earth.surfaceGravity();
 		for (Planet p : Planet.values()) {
-			System.out.printf("Weight on %s is %f%n", p, p.surfaceWeight(mass));
+			System.out.printf("Weight on %s is %f%n", p, Double.valueOf(p.surfaceWeight(mass)));
 			System.out.printf("You are %s of the %s%n", "king", "world");
 		}
 		
 		/** Sample of Operation enum in common... it has an abstract method **/
-		System.out.printf("The result is %f, so stuff it.%n", Operation.PLUS.apply(23, 45));
-		System.out.printf("The result is %f, so stuff it.%n", Operation.MINUS.apply(23, 45));
-		System.out.printf("The result is %f, so stuff it.%n", Operation.TIMES.apply(23, 45));
-		System.out.printf("The result is %f, so stuff it.%n", Operation.DIVIDE.apply(23, 45));
+		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.PLUS.apply(23, 45)));
+		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.MINUS.apply(23, 45)));
+		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.TIMES.apply(23, 45)));
+		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.DIVIDE.apply(23, 45)));
 		
 				
 		Apple zz = Apple.FUJI;

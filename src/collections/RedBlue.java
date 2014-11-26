@@ -16,11 +16,12 @@ public class RedBlue {
 		elm.setName("Elm");
 		elm.setInfo("An elm is a really tall tree.");
 		elm.setGroup("Deciduous");
-		elm.setHeight(45);
-		elm.setWidth(30);
+		elm.setHeight(Integer.valueOf(45));
+		elm.setWidth(Integer.valueOf(30));
 		
 		Class<?> myclass = elm.getClass();
 		Field[] fields = myclass.getDeclaredFields();
+		@SuppressWarnings("unused")
 		Map<String, Object> mymap = new HashMap<String, Object>();
 		try {
 			for(Field field : fields) {
