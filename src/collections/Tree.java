@@ -20,7 +20,7 @@ public class Tree implements Serializable {
 	
 	public Tree() {
 		System.out.println("Plant a tree.");
-		System.out.println(serialVersionUID);
+		//System.out.println(serialVersionUID);
 	}
 
 	public String getName() {

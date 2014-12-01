@@ -25,16 +25,21 @@ public class RedBlue {
 		Map<String, Object> mymap = new HashMap<String, Object>();
 		try {
 			for(Field field : fields) {
-				StringBuilder propertyDef = new StringBuilder("The properties for a tree object :: ");
-				propertyDef.append(field.getType());
-				propertyDef.append(" :: ");
-				propertyDef.append(field.getName());
-				propertyDef.append(" :: ");
-				propertyDef.append(field.get(elm));
-				System.out.println(propertyDef.toString());
-				
-				//We can also add the name value pairs to a map.
-				mymap.put(field.getName().toString(), field.get(elm));
+				try {
+					StringBuilder propertyDef = new StringBuilder("The properties for a tree object :: ");
+					propertyDef.append(field.getType());
+					propertyDef.append(" :: ");
+					propertyDef.append(field.getName());
+					propertyDef.append(" :: ");
+					propertyDef.append(field.get(elm));
+					System.out.println(propertyDef.toString());
+					
+					//We can also add the name value pairs to a map.
+					
+					mymap.put(field.getName().toString(), field.get(elm));
+				} catch(Exception e) {
+					System.out.println("Error getting properties. Ignore.");
+				}
 			}
 		} catch(Exception e) {
 			System.out.println("Error occurred" + e.getMessage());
