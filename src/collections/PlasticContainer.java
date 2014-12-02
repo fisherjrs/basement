@@ -31,7 +31,22 @@ public class PlasticContainer implements Serializable {
 		ArrayList<String> colors = new ArrayList<String>();
 		colors.add("red");
 		colors.add("blue");
+		//dump list
 		System.out.println(colors);
+		
+		//loop over list
+		for(Object o : colors){
+		    System.out.println(o);    
+		}
+		
+		//Use collections util to modify/inspect items.
+		CollectionsUtil.UpperCaseItems(colors);
+		
+		//dump current state of collection ... may or may not be different depending on what was done in CollectionsUtil
+		for(Object o : colors){
+		    System.out.println(o);    
+		}
+		
 	}
 	
 	
