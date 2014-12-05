@@ -2,6 +2,8 @@ package collections;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -18,16 +20,16 @@ import java.util.List;
 
 public class PlasticContainer implements Serializable {
 
-	private static final long serialVersionUID = 4387372452560371581L;
-	
-	
-	
+	private static final long serialVersionUID = 678851449035085377L;
+
 	public static void main(String[] args) {
 		System.out.println("Start the app.");
-		init();
+		myArrayList();
+		myHashSet();
 	}
 	
-	private static void init() {
+	@SuppressWarnings("unused")
+	private static void myArrayList() {
 		ArrayList<String> colors = new ArrayList<String>();
 		colors.add("red");
 		colors.add("blue");
@@ -47,6 +49,25 @@ public class PlasticContainer implements Serializable {
 		    System.out.println(o);    
 		}
 		
+	}
+	
+	/**
+	 * HashSet does not guarantee any insertion order.
+	 * It does allow null elements. 
+	 * It can be used in place of ArrayList to store objects if you require no duplicate and don't care about insertion order.
+	 * It provides constant time performance for operations such as add, remove, contains, etc ...
+	 * HashSet is not synchronized. If separate threads access the set, and one of them modifies the set, the set must be synchronized externally.
+	 * 
+	 */
+	@SuppressWarnings("unused")
+	private static void myHashSet() {
+		Collection<String> hashSet1 = new HashSet<String>();
+		hashSet1.add("The sky is blue.");
+		hashSet1.add("Trees are tall.");
+		
+		for (Object o : hashSet1) {
+			System.out.println("HashSet loop 1 :: " + o);
+		}
 	}
 	
 	
