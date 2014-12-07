@@ -68,6 +68,11 @@ public class PlasticContainer implements Serializable {
 		for (Object o : hashSet1) {
 			System.out.println("HashSet loop 1 :: " + o);
 		}
+		
+		System.out.println(hashSet1.contains("Trees"));
+		System.out.println(hashSet1.contains("Trees are tall."));
+		
+		
 	}
 	
 	

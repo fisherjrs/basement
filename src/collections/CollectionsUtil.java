@@ -28,4 +28,26 @@ public class CollectionsUtil {
 			}
 		}
 	}
+	
+	/*
+	 * As this stands it's too specific to belond in a util class. 
+	 */
+	public static void addElementToList(ArrayList<Tree> myArrayList, Tree myTree, Integer position) throws IndexOutOfBoundsException {
+		
+		//Tree is allowed to be null. Should it be?
+		
+		if(myArrayList != null) {
+			if(position == null || position.intValue() < 0) {
+				position = Integer.valueOf(myArrayList.size());
+			}
+			try {
+				myArrayList.add(position.intValue(), myTree);
+			} catch (IndexOutOfBoundsException e) {
+				throw(e);
+			}
+		} else {
+			System.out.println("The array list is null. Create? Ignore? Throw error?");
+		}
+		
+	}
 }
