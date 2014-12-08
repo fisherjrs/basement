@@ -30,7 +30,7 @@ public class CollectionsUtil {
 	}
 	
 	/*
-	 * As this stands it's too specific to belond in a util class. 
+	 * As this stands it's too specific to belong in a util class. 
 	 */
 	public static void addElementToList(ArrayList<Tree> myArrayList, Tree myTree, Integer position) throws IndexOutOfBoundsException {
 		
