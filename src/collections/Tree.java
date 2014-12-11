@@ -1,6 +1,7 @@
 package collections;
 
 import java.io.Serializable;
+import java.util.HashMap;
 
 /**
  * This is a bean. It implements Serializable, it has a zero arg constructor and it has public getters/setters.

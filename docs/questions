@@ -1,0 +1,11 @@
+Interface - Map
+	A Map is an object that maps keys to value. It cannot contain duplicate keys and each key can only map to one value.
+	The contents can be viewed in three ways: a set of keys, a collection of values, or a set of key-value mappings. 
+
+	It's not a good idea to have keys be mutable objects. The behavior of the equals comparisons can get wonky.
+	A map cannot contain itself as a key. A map can contain itself as a value, but the equals comparison is not reliable.
+
+	A map implementation shoud provide two constructors: a no arguments constructor and one that takes Map as an argument.
+	All maps in the JDK have this implementation. The constructor with a map argument allows a copy of an existing map.
+	
+	
