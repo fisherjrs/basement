@@ -1,8 +1,12 @@
 package threads;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class ThreadVolatile {
 	
 	private static int MY_INT = 0;
+	private static Logger LOG = LogManager.getLogger(ThreadVolatile.class);
 	
 	public static void main(String[] args) {
 		new ChangeListener().start();
@@ -14,7 +18,7 @@ public class ThreadVolatile {
 		public void run(){
 			int local_value = MY_INT;
 			while(MY_INT < 5) {
-				System.out.println("Got Change for MY_INT : " + MY_INT + " local_value is " + local_value);
+				LOG.debug("Got Change for MY_INT : " + MY_INT + " local_value is " + local_value);
 				try{
 					Thread.sleep(500);
 				}catch(InterruptedException e){
@@ -30,11 +34,11 @@ public class ThreadVolatile {
 			int local_value = MY_INT;
 			while(MY_INT < 5) {
 				MY_INT = ++local_value;
-				System.out.println("Incremented MY_INT : " + MY_INT + " local_value is " + local_value);
+				LOG.debug("Incremented MY_INT : " + MY_INT + " local_value is " + local_value);
 				try{
 					Thread.sleep(500);
 				}catch(InterruptedException e){
-					System.out.println(e.getMessage());					
+					LOG.debug(e.getMessage());					
 				}
 			}
 		}

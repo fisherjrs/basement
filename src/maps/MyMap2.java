@@ -853,10 +853,12 @@ public class MyMap2<K,V>
      * <tt>removeAll</tt>, <tt>retainAll</tt>, and <tt>clear</tt>
      * operations.  It does not support the <tt>add</tt> or <tt>addAll</tt>
      * operations.
+     * 
+     * This function is changed because the keyset field is not visible.
      */
     public Set<K> keySet() {
-        Set<K> ks = keySet;
-        return (ks != null ? ks : (keySet = new KeySet()));
+        Set<K> ks = keySet();
+        return (ks != null ? ks : (new KeySet()));
     }
 
     private final class KeySet extends AbstractSet<K> {
@@ -889,10 +891,12 @@ public class MyMap2<K,V>
      * <tt>Collection.remove</tt>, <tt>removeAll</tt>,
      * <tt>retainAll</tt> and <tt>clear</tt> operations.  It does not
      * support the <tt>add</tt> or <tt>addAll</tt> operations.
+     * 
+     * This function is changed because the values field is not visible.
      */
     public Collection<V> values() {
-        Collection<V> vs = values;
-        return (vs != null ? vs : (values = new Values()));
+        Collection<V> vs = values();
+        return (vs != null ? vs : (new Values()));
     }
 
     private final class Values extends AbstractCollection<V> {
