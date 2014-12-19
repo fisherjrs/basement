@@ -1,5 +1,8 @@
 package enums;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 /*
  * An enum type is used to hold a fixed set of constants. Use them instead of int enum patterns which were used before enum types were introduced in 1.5. 
  * 
@@ -9,6 +12,8 @@ package enums;
  * 		Enums provide compile time type safety 
  */
 public class Red {
+	
+	private static Logger LOG = LogManager.getLogger(Red.class);
 
 	public enum Apple { FUJI, BRAEBURN, PIPPIN };
 	public enum Regions { FUJI, BRAEBURN, PIPPIN };
@@ -18,15 +23,19 @@ public class Red {
 	 */
 	public static void main(String[] args) {		
 		
-		/** Sample of Planet enum in common **/
+		// Sample of Planet enum in common
+		
+		
 		double earthWeight = Double.parseDouble((args.length == 0) ? "67" : args[0]);
 		double mass = earthWeight / Planet.Earth.surfaceGravity();
 		for (Planet p : Planet.values()) {
-			System.out.printf("Weight on %s is %f%n", p, Double.valueOf(p.surfaceWeight(mass)));
-			System.out.printf("You are %s of the %s%n", "king", "world");
+			LOG.info("Weight on {} is {}{}", p, Double.valueOf(p.surfaceWeight(mass)));
+			LOG.info("You are {} of the {}", "king", "world");
 		}
 		
-		/** Sample of Operation enum in common... it has an abstract method **/
+		/*
+		
+		//Sample of Operation enum in common... it has an abstract method
 		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.PLUS.apply(23, 45)));
 		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.MINUS.apply(23, 45)));
 		System.out.printf("The result is %f, so stuff it.%n", Double.valueOf(Operation.TIMES.apply(23, 45)));
@@ -47,7 +56,7 @@ public class Red {
 		System.out.println(bb.compareTo(zz));
 						
 		
-		/** Enums have their own namespace **/
+		//Enums have their own namespace 
 		Apple yy = Apple.FUJI;
 		Regions cc = Regions.FUJI;
 		
@@ -69,6 +78,8 @@ public class Red {
 		} else {
 			System.out.println("No the instance doesn't compare to the definition");
 		}
+		
+		*/
 		
 	}
 }

@@ -10,7 +10,7 @@ public class ThreadVolatile {
 	
 	public static void main(String[] args) {
 		new ChangeListener().start();
-		new ChangeMaker().start();
+		//new ChangeMaker().start();
 	}
 	
 	static class ChangeListener extends Thread {
