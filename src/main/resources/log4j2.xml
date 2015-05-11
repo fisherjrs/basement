@@ -29,7 +29,7 @@
     	<AppenderRef ref="Console" level="debug"/>
     </Logger> 
   
-    <Root level="warn">
+    <Root level="debug">
       <AppenderRef ref="Console" level="trace"/>
       <AppenderRef ref="rootlogfile" level="trace" />
     </Root>   
