@@ -23,6 +23,17 @@ public class Red {
 	 */
 	public static void main(String[] args) {		
 		
+		LOG.debug(Day.FRIDAY);
+		LOG.debug(Month.APRIL);
+		if("FRIDAY".equals(Day.FRIDAY.toString())) {
+			LOG.debug("go friday.");
+		}
+		
+		if("friday".toUpperCase().equals(Day.FRIDAY.toString())){
+			LOG.debug("still friday");
+		}
+		
+		
 		// Sample of Planet enum in common
 		
 		
