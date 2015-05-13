@@ -108,11 +108,11 @@ public class PlayingCard {
 		case ACE :
 			return "ace";
 		case TWO :
-			return "clubs";
+			return "two";
 		case THREE :
-			return "diamonds";
+			return "three";
 		case FOUR :
-			return "spades";
+			return "four";
 		case FIVE :
 			return "five";
 		case SIX :
