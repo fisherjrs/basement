@@ -5,11 +5,11 @@ import java.time.chrono.IsoChronology;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Person {
-	private static Logger LOG = LogManager.getLogger(Person.class);
+	private static Logger LOG = LoggerFactory.getLogger(Person.class);
 	
 	public enum Sex {
 		FEMALE, MALE;
@@ -49,6 +49,10 @@ public class Person {
 	
 	public void printPerson() {
 		LOG.debug(this.getName());
+	}
+	
+	public String getGreeting() {
+		return "Yes, " + this.getName() + ", the Rolling Stones are way better than Richard Marx.";
 	}
 	
 	public static int compareByAge(Person a, Person b) {

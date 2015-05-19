@@ -1,12 +1,12 @@
 package threads;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 public class ThreadVolatile {
 	
 	private static int MY_INT = 0;
-	private static Logger LOG = LogManager.getLogger(ThreadVolatile.class);
+	private static Logger LOG = LoggerFactory.getLogger(ThreadVolatile.class);
 	
 	public static void main(String[] args) {
 		new ChangeListener().start();

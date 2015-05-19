@@ -1,7 +1,7 @@
 package enums;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 /*
  * An enum type is used to hold a fixed set of constants. Use them instead of int enum patterns which were used before enum types were introduced in 1.5. 
@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class Red {
 	
-	private static Logger LOG = LogManager.getLogger(Red.class);
+	private static Logger LOG = LoggerFactory.getLogger(Red.class);
 
 	public enum Apple { FUJI, BRAEBURN, PIPPIN };
 	public enum Regions { FUJI, BRAEBURN, PIPPIN };
@@ -23,8 +23,8 @@ public class Red {
 	 */
 	public static void main(String[] args) {		
 		
-		LOG.debug(Day.FRIDAY);
-		LOG.debug(Month.APRIL);
+		LOG.debug(Day.FRIDAY.toString());
+		LOG.debug(Month.APRIL.toString());
 		if("FRIDAY".equals(Day.FRIDAY.toString())) {
 			LOG.debug("go friday.");
 		}

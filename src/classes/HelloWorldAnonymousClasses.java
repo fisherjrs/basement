@@ -1,10 +1,10 @@
 package classes;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HelloWorldAnonymousClasses {
-	private static Logger LOG = LogManager.getLogger(HelloWorldAnonymousClasses.class);
+	private static Logger LOG = LoggerFactory.getLogger(HelloWorldAnonymousClasses.class);
 
 	interface HelloWorld {
 		public void greet();

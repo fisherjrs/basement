@@ -1,10 +1,10 @@
 package collections;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
 public class ArrayReverse {
-	private static Logger LOG = LogManager.getLogger(ArrayReverse.class);
+	private static Logger LOG = LoggerFactory.getLogger(ArrayReverse.class);
 	
 	public static void main (String[] args) {
 		Tree oak = new Tree();

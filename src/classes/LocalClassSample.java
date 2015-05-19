@@ -1,11 +1,11 @@
 package classes;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LocalClassSample {
 	
-	private static Logger LOG = LogManager.getLogger(LocalClassSample.class);
+	private static Logger LOG = LoggerFactory.getLogger(LocalClassSample.class);
 	
 	static String regularExpression = "[^0-9]";
 	

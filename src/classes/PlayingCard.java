@@ -3,11 +3,11 @@ package classes;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class PlayingCard {
-	public static Logger LOG = LogManager.getLogger(PlayingCard.class);
+	public static Logger LOG = LoggerFactory.getLogger(PlayingCard.class);
 	
 	private final int rank;
 	private final int suit;

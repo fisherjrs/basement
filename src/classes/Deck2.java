@@ -1,17 +1,17 @@
 package classes;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import enums.Ranks;
 import enums.Suits;
 
 public class Deck2 {
-	public static Logger LOG = LogManager.getLogger(Deck2.class);
+	public static Logger LOG = LoggerFactory.getLogger(Deck2.class);
 	
 	public static void main (String[] args) {
-		LOG.debug(Ranks.values());
-		LOG.debug(Suits.values());
+		LOG.debug(Ranks.values().toString());
+		LOG.debug(Suits.values().toString());
 		for( Suits suit : Suits.values()) {
 			for (Ranks rank : Ranks.values()) {
 				PlayingCards3 card3 = new PlayingCards3(rank, suit);

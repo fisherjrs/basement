@@ -1,11 +1,11 @@
 package classes;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DataStructure {
 
-	private static Logger LOG = LogManager.getLogger(DataStructure.class);
+	private static Logger LOG = LoggerFactory.getLogger(DataStructure.class);
 	
     // Create an array
     private final static int SIZE = 15;

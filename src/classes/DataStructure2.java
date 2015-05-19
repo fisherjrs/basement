@@ -75,6 +75,11 @@ public class DataStructure2 {
     
     public static void main(String s[]) {
         
+    	int a = 1;
+    	System.out.println(a << 0);
+    	System.out.println(a << 1);
+    	System.out.println(a << 2);
+    	System.out.println(a << 3);
         // Fill the array with integer values and print out only
         // values of even indices
         DataStructure2 ds = new DataStructure2();

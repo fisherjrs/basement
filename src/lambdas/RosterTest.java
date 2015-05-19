@@ -8,11 +8,11 @@ import java.util.function.Predicate;
 import java.lang.Iterable;
 import java.time.chrono.IsoChronology;
  
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
  
 public class RosterTest {
-	private static Logger LOG = LogManager.getLogger(RosterTest.class);
+	private static Logger LOG = LoggerFactory.getLogger(RosterTest.class);
 	
     interface CheckPerson {
         boolean test(Person p);
