@@ -3,13 +3,11 @@ package logz;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-/*
- * Sienna has it's own Logger configured in log4j2.xm (unless I've changed it without updating this comment. 12/18/14
- */
-
 public class Scarlet {
 
 	private static Logger LOG = LoggerFactory.getLogger(Scarlet.class);
+	
+	private Integer designId;
 	
 	public Scarlet() {
 		LOG.trace("Logger trace message.");
@@ -18,5 +16,9 @@ public class Scarlet {
         LOG.warn("Logger warn message");
         LOG.error("Logger error message");
         
+	}
+	
+	public Integer getDesignId() {
+		return this.designId;
 	}
 }
