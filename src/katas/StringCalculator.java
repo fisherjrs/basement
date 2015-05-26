@@ -1,0 +1,28 @@
+package katas;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class StringCalculator {
+	private static final Logger LOG = LoggerFactory.getLogger(StringCalculator.class);
+	
+	public static void main(String[] args) {
+		LOG.debug("Go");
+	}
+	
+	public StringCalculator() {
+		
+	}
+	
+	public static final void add(final String numbers) {
+		String[] numbersArray = numbers.split(",");
+		if(numbersArray.length > 2) {
+			throw new RuntimeException("Up to 2 numbers separated by commas (,) are allowed.");
+		}else{
+			for (String number : numbersArray) {
+                Integer.parseInt(number); // If it is not a number, parseInt will throw an exception
+            }
+		}
+		
+	}
+}
