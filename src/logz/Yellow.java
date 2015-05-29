@@ -1,11 +1,11 @@
 package logz;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class Yellow {
 
-	private static Logger LOG = LoggerFactory.getLogger(Yellow.class);
+	private static Logger LOG = LogManager.getLogger(Yellow.class);
 	
 	public static void main(String[] args) {
 		LOG.trace("Logger trace message.");

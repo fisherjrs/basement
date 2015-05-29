@@ -1,15 +1,12 @@
 package logz;
 
-import org.slf4j.LoggerFactory;
-import org.slf4j.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
-/*
- * Sienna has it's own Logger configured in log4j2.xm (unless I've changed it without updating this comment. 12/18/14
- */
 
 public class Scarlet {
 
-	private static Logger LOG = LoggerFactory.getLogger(Scarlet.class);
+	private static Logger LOG = LogManager.getLogger(Scarlet.class);
 	
 	public Scarlet() {
 		LOG.trace("Logger trace message.");
