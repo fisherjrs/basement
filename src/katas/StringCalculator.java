@@ -4,25 +4,30 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class StringCalculator {
-	private static final Logger LOG = LoggerFactory.getLogger(StringCalculator.class);
+	private final static Logger LOG = LoggerFactory.getLogger(StringCalculator.class);
 	
 	public static void main(String[] args) {
-		LOG.debug("Go");
+		LOG.debug("go.");
+		LOG.debug("{}",StringCalculator.add(""));
 	}
 	
 	public StringCalculator() {
 		
 	}
 	
-	public static final void add(final String numbers) {
+	public static final int add(final String numbers) {
+		int returnValue = 0;
 		String[] numbersArray = numbers.split(",");
 		if(numbersArray.length > 2) {
-			throw new RuntimeException("Up to 2 numbers separated by commas (,) are allowed.");
-		}else{
-			for (String number : numbersArray) {
-                Integer.parseInt(number); // If it is not a number, parseInt will throw an exception
-            }
+			throw(new RuntimeException());
+		} else {
+			for(String number : numbersArray) {
+				if(!number.isEmpty()) {
+					returnValue += Integer.parseInt(number);
+				}
+			}
 		}
 		
+		return returnValue;
 	}
 }
