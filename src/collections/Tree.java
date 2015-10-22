@@ -5,7 +5,7 @@ import java.util.HashMap;
 
 /**
  * This is a bean. It implements Serializable, it has a zero arg constructor and it has public getters/setters.
- * A class that implements Serializable will have their state serialized and deserialized.
+ * A class that implements Serializable will have its state serialized and deserialized.
  * It's strongly recommended that Serializable classes declare the serialVersionUID.
  */
 public class Tree implements Serializable {

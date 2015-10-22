@@ -21,7 +21,7 @@ public class CopyBytes{
 	
 	public FileOutputStream readStream() {
 		
-		try (FileInputStream in = new FileInputStream("c:\\dev\\workspaces\\sts3.6.4\\basement\\src\\io\\lifeandtimes.txt");
+		try (FileInputStream in = new FileInputStream("c:\\dev\\workspaces\\sts.general\\basement\\src\\io\\lifeandtimes.txt");
 				FileOutputStream out = new FileOutputStream("output.txt");
 				){
 			

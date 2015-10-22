@@ -15,21 +15,24 @@ public class BasicThread {
 	
 	public static void main(String[] args) {
 		LOG.info("Start the BasicThread app.");
-		new TimeMarker().start();
+		TimeMarker tm = new TimeMarker();
+		tm.start();
 	}
 	
 	static class TimeMarker extends Thread {		
 		@Override
 		public void run() {
-			while(MY_INT < 5) {
-				LOG.info("TimeMarker info");
-				LOG.warn("TimeMarker warn");
+			/*while(MY_INT < 5) {
+				LOG.info(String.format("TimeMarker info %s ", MY_INT));
+				MY_INT++;
 				try{
 					Thread.sleep(500);
 				} catch(InterruptedException e) {
 					LOG.error("Error in TimeMarker thread.");
 				}
-			}
+			}*/
+			
+			LOG.info("thread is running.");
 		}
 	}
 	
