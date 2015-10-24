@@ -3,7 +3,6 @@ package basement;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
 
-
 public class App {
 	private static Logger LOG = LoggerFactory.getLogger(App.class);
 	
@@ -13,6 +12,7 @@ public class App {
 		App.myMysteryMethod(9);
 		Hero h = new Hero();
 		h.fight(new Dragon());
+		
 	}
 	
 	public static void myMysteryMethod ( int max )

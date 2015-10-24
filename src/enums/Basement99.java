@@ -4,6 +4,7 @@ public class Basement99 {
 	
 	public static void main(String[] args) {
 		Basement99.go();
+		Basement43XS bsm = new Basement43XS();
 	}
 	
 	public Basement99() {

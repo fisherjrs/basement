@@ -4,6 +4,9 @@ public class Basement43XS {
 	
 	public interface Operation {
 		double apply(double x, double y);
+		default String runIt() {
+			return "faf";
+		}
 	}
 	
 	public enum Month {
@@ -51,6 +54,12 @@ public class Basement43XS {
 		public String toString() {
 			return symbol;
 		}
+		
+		@Override
+		public String runIt() {
+			return "gaf";
+		}
+		
 	}
 	
 	public static void main(String[] args) {
@@ -62,6 +71,8 @@ public class Basement43XS {
 		
 		test(ExtendedOperation.class, 35, 8);
 		//test(Month.class, 23, 12); //Fail. the test method is expecting an enum type T that is also type Operation.
+		
+		System.out.println(ExtendedOperation.REMAINDER.runIt());
 	}
 	
 	private static <T extends Enum<T> & Operation> void test(Class<T> optSet, double x, double y) {
