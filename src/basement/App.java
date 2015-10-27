@@ -8,10 +8,18 @@ public class App {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//LOG.jdebug("Start the App.");
 		App.myMysteryMethod(9);
 		Hero h = new Hero();
 		h.fight(new Dragon());
+		LOG.debug("a :: " + h.health);
+		int i = 45;
+		switch(i){
+			case 15 : case 23 : case 45 :
+				System.out.println("erwft");
+				break;
+			default :
+				System.out.println("jiggity");
+		}
 		
 	}
 	
@@ -19,9 +27,11 @@ public class App {
 	{
 	  for ( int i = 1; i <= max; i++ ) {
 	    for ( int j = 1; j <= max; j++ ) {
-	      System.out.print ( String.format ( "%6d", j * i ));
+	    	
+	    	System.out.print ( String.format ( "%6d", j * i ));
+	      
 	    }
-	  System.out.println();
+	    System.out.println();
 	  }
 	}
 	
