@@ -47,6 +47,7 @@ public class App {
 	    health -= dragon.breathFire().getAmount();
 	  }
 	}
+	
 	public static class Damage{
 	  private int amount;
 	  public Damage(int amount){
@@ -54,7 +55,7 @@ public class App {
 	  }
 	  public int getAmount(){
 		  return amount;
-		 }
+	  }
 	}
 	
 
