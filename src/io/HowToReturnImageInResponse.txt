@@ -1,0 +1,60 @@
+
+Open connection to file with FileInputStream. 
+
+	FileInputStream in = new FileInputStream(path);
+
+If you're using spring you can have a controller that returns a ResponseEntity<ByteArrayResource>
+
+Create a ByteArrayResource from the inputstream:
+
+    ByteArrayResource bar = new ByteArrayResource(IOUtils.toByteArray(in));
+    
+Build your response entity - set the content length, set the content type:
+
+    return ResponseEntity.ok().contentLength(bar.contentLength()).contentType(MediaType.IMAGE_JPEG).body(bar);
+    
+ 
+If not using a modern Spring version or say you just have a java servlet you can write to the response object's outputstream:
+
+ ServletContext cntx= getServletContext();
+      // Get the absolute path of the image
+      String filename = cntx.getRealPath("Images/button.png");
+      // retrieve mimeType dynamically
+      String mime = cntx.getMimeType(filename);
+      if (mime == null) {
+        resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        return;
+      }
+
+      resp.setContentType(mime);
+      File file = new File(filename);
+      resp.setContentLength((int)file.length());
+
+      FileInputStream in = new FileInputStream(file);
+      OutputStream out = resp.getOutputStream();
+
+      // Copy the contents of the file to the output stream
+       byte[] buf = new byte[1024];
+       int count = 0;
+       while ((count = in.read(buf)) >= 0) {
+         out.write(buf, 0, count);
+      }
+    out.close();
+    in.close();   
+    
+    
+   However, Apache commons has an IOUtils copy function that will do the same thing with less code.
+   
+   InputStream in = null;
+OutputStream out = null;
+
+try {
+    in = object.getObjectContent();
+    out = response.getOutputStream();
+    IOUtils.copy(in, out);
+} finally {
+    IOUtils.closeQuietly(in);
+    IOUtils.closeQuietly(out);
+}
+    
+    
