@@ -10,19 +10,11 @@ public class Hobo extends Vagabond{
 	}
 	
 	public Hobo() {
-		super("The sea.", "The cosmos");
+		super();
 	}
 	
 	public Hobo( String myera) {
 		super(myera);
-	}
-	
-	public void setEra(String myera) {
-		era = myera;
-	}
-	
-	public String getEra() {
-		return era;
 	}
 	
 	protected String getFarthestDistanceTraveled() {
