@@ -14,8 +14,8 @@ public class FertileLand {
 		Rectangle fullField = new Rectangle(0,0, 400, 600);
 		Integer totalArea = fullField.width * fullField.height;
 		
-		//Rectangle rect1 = new Rectangle(0, 292, 400 - 0, 307 - 292);
-		Rectangle rect1 = new Rectangle(192, 0, 207-192, 600 );
+		Rectangle rect1 = new Rectangle(0, 292, 400 - 0, 307 - 292);
+		//Rectangle rect1 = new Rectangle(192, 0, 207-192, 600 );
 		System.out.println(rect1);
 		
 		if( rect1.width >= fullField.width && rect1.height >= fullField.height) {
