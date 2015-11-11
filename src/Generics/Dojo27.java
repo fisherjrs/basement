@@ -19,6 +19,11 @@ public class Dojo27 {
 		for(String s : strings) 
 			System.out.println(sameString.apply(s));
 		
+		Integer[] integers = {23, 45, 88};
+		UnaryFunction<Integer> sameInteger = identityFunction();
+		for(Integer integer : integers) 
+			System.out.println(sameInteger.apply(integer));
+		
 	}
 	
 	public Dojo27() {
@@ -40,6 +45,13 @@ public class Dojo27 {
 		return result;
 	}
 	
+	/**
+	 * On occasion you will need to create an object that is immutable but applicable to many different types.
+	 * Because generics are implemented by erasure, you can use a single object for all required type parameterizations, but you need to write a
+	 * static factory method to repeatedly dole out the object for each requested type parameterization. This pattern is most frequently used
+	 * by function objects (item 21) such as Collections.reverseOrder but is also used for collections such as Collections.emptySet
+	 * 
+	 */
 	public interface UnaryFunction<T> {
 		T apply(T arg);
 	}
